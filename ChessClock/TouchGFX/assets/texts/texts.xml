@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.26.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Wildcards">
+      <Text Id="WC_CLOCK" Alignment="Center" TypographyId="Clock">
+        <Translation Language="GB">&lt;time&gt;</Translation>
+      </Text>
+      <Text Id="WC_VALUE" Alignment="Center" TypographyId="Value">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="WC_LABEL" Alignment="Center" TypographyId="Label">
+        <Translation Language="GB">&lt;label&gt;</Translation>
+      </Text>
+      <Text Id="WC_SMALL" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;info&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Static">
+      <Text Id="BTN_RESET" Alignment="Center" TypographyId="Label">
+        <Translation Language="GB">RESET</Translation>
+      </Text>
+      <Text Id="BTN_SETTINGS" Alignment="Center" TypographyId="Label">
+        <Translation Language="GB">SETTINGS</Translation>
+      </Text>
+      <Text Id="BTN_CANCEL" Alignment="Center" TypographyId="Label">
+        <Translation Language="GB">CANCEL</Translation>
+      </Text>
+      <Text Id="BTN_APPLY" Alignment="Center" TypographyId="Label">
+        <Translation Language="GB">START GAME</Translation>
+      </Text>
+      <Text Id="NAME_WHITE" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">WHITE</Translation>
+      </Text>
+      <Text Id="NAME_BLACK" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">BLACK</Translation>
+      </Text>
+      <Text Id="SET_TITLE" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">TIME CONTROL</Translation>
+      </Text>
+      <Text Id="SET_MINUTES" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">MINUTES</Translation>
+      </Text>
+      <Text Id="SET_INCREMENT" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">INCREMENT (SEC)</Translation>
+      </Text>
+      <Text Id="SET_MINUS" Alignment="Center" TypographyId="Value">
+        <Translation Language="GB">-</Translation>
+      </Text>
+      <Text Id="SET_PLUS" Alignment="Center" TypographyId="Value">
+        <Translation Language="GB">+</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Clock" Font="verdana.ttf" Size="80" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789:." />
+    <Typography Id="Title" Font="verdana.ttf" Size="34" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Value" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E,0x221E" />
+    <Typography Id="Label" Font="verdana.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Small" Font="verdana.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+  </Typographies>
+</TextDatabase>

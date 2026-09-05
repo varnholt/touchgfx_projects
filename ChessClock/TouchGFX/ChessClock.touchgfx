@@ -1,0 +1,1100 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "GameScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "panelLeft",
+            "Width": 396,
+            "Height": 406,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "panelRight",
+            "X": 404,
+            "Width": 396,
+            "Height": 406,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "turnBarLeft",
+            "Y": 96,
+            "Width": 14,
+            "Height": 310,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "turnBarRight",
+            "X": 786,
+            "Y": 96,
+            "Width": 14,
+            "Height": 310,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "bottomBar",
+            "Y": 406,
+            "Width": 800,
+            "Height": 74,
+            "Color": {
+              "Red": 11,
+              "Green": 13,
+              "Blue": 18
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "plateLeft",
+            "Width": 396,
+            "Height": 96,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nameLeft",
+            "Y": 12,
+            "Width": 396,
+            "Height": 44,
+            "TextId": "NAME_WHITE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 20,
+              "Green": 23,
+              "Blue": 30
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "captionLeft",
+            "Y": 58,
+            "Width": 396,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 20,
+              "Green": 23,
+              "Blue": 30
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeLeft",
+            "Y": 160,
+            "Width": 396,
+            "Height": 100,
+            "TextId": "WC_CLOCK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "movesLeft",
+            "Y": 315,
+            "Width": 396,
+            "Height": 26,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 122,
+              "Green": 129,
+              "Blue": 148
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "plateRight",
+            "X": 404,
+            "Width": 396,
+            "Height": 96
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nameRight",
+            "X": 404,
+            "Y": 12,
+            "Width": 396,
+            "Height": 44,
+            "TextId": "NAME_BLACK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "captionRight",
+            "X": 404,
+            "Y": 58,
+            "Width": 396,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeRight",
+            "X": 404,
+            "Y": 160,
+            "Width": 396,
+            "Height": 100,
+            "TextId": "WC_CLOCK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "movesRight",
+            "X": 404,
+            "Y": 315,
+            "Width": 396,
+            "Height": 26,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 122,
+              "Green": 129,
+              "Blue": 148
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tcLabel",
+            "X": 12,
+            "Y": 428,
+            "Width": 224,
+            "Height": 28,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 233,
+              "Green": 196,
+              "Blue": 106
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 24
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "btnPauseBg",
+            "X": 248,
+            "Y": 418,
+            "Width": 160,
+            "Height": 52,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "btnPauseLabel",
+            "X": 248,
+            "Y": 430,
+            "Width": 160,
+            "Height": 30,
+            "TextId": "WC_LABEL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "btnResetBg",
+            "X": 418,
+            "Y": 418,
+            "Width": 160,
+            "Height": 52,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "btnResetLabel",
+            "X": 418,
+            "Y": 430,
+            "Width": 160,
+            "Height": 30,
+            "TextId": "BTN_RESET",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "btnSettingsBg",
+            "X": 588,
+            "Y": 418,
+            "Width": 196,
+            "Height": 52,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "btnSettingsLabel",
+            "X": 588,
+            "Y": 430,
+            "Width": 196,
+            "Height": 30,
+            "TextId": "BTN_SETTINGS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "SettingsScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "settingsBg",
+            "Width": 800,
+            "Height": 480,
+            "Color": {
+              "Red": 11,
+              "Green": 13,
+              "Blue": 18
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsTitle",
+            "Y": 26,
+            "Width": 800,
+            "Height": 44,
+            "TextId": "SET_TITLE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 233,
+              "Green": 196,
+              "Blue": 106
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset0Bg",
+            "X": 40,
+            "Y": 92,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset0Val",
+            "X": 40,
+            "Y": 102,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset0Sub",
+            "X": 40,
+            "Y": 142,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset1Bg",
+            "X": 224,
+            "Y": 92,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset1Val",
+            "X": 224,
+            "Y": 102,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset1Sub",
+            "X": 224,
+            "Y": 142,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset2Bg",
+            "X": 408,
+            "Y": 92,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset2Val",
+            "X": 408,
+            "Y": 102,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset2Sub",
+            "X": 408,
+            "Y": 142,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset3Bg",
+            "X": 592,
+            "Y": 92,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset3Val",
+            "X": 592,
+            "Y": 102,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset3Sub",
+            "X": 592,
+            "Y": 142,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset4Bg",
+            "X": 40,
+            "Y": 186,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset4Val",
+            "X": 40,
+            "Y": 196,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset4Sub",
+            "X": 40,
+            "Y": 236,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset5Bg",
+            "X": 224,
+            "Y": 186,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset5Val",
+            "X": 224,
+            "Y": 196,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset5Sub",
+            "X": 224,
+            "Y": 236,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset6Bg",
+            "X": 408,
+            "Y": 186,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset6Val",
+            "X": 408,
+            "Y": 196,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset6Sub",
+            "X": 408,
+            "Y": 236,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "preset7Bg",
+            "X": 592,
+            "Y": 186,
+            "Width": 168,
+            "Height": 80,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset7Val",
+            "X": 592,
+            "Y": 196,
+            "Width": 168,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "preset7Sub",
+            "X": 592,
+            "Y": 236,
+            "Width": 168,
+            "Height": 24,
+            "TextId": "WC_SMALL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 138,
+              "Green": 146,
+              "Blue": 165
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "minLabel",
+            "X": 40,
+            "Y": 282,
+            "Width": 340,
+            "Height": 24,
+            "TextId": "SET_MINUTES",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 122,
+              "Green": 129,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "minMinusBg",
+            "X": 40,
+            "Y": 312,
+            "Width": 64,
+            "Height": 60,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "minMinus",
+            "X": 40,
+            "Y": 323,
+            "Width": 64,
+            "Height": 38,
+            "TextId": "SET_MINUS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "minValueBg",
+            "X": 112,
+            "Y": 312,
+            "Width": 196,
+            "Height": 60,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "minValue",
+            "X": 112,
+            "Y": 323,
+            "Width": 196,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "minPlusBg",
+            "X": 316,
+            "Y": 312,
+            "Width": 64,
+            "Height": 60,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "minPlus",
+            "X": 316,
+            "Y": 323,
+            "Width": 64,
+            "Height": 38,
+            "TextId": "SET_PLUS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "incLabel",
+            "X": 420,
+            "Y": 282,
+            "Width": 340,
+            "Height": 24,
+            "TextId": "SET_INCREMENT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 122,
+              "Green": 129,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "incMinusBg",
+            "X": 420,
+            "Y": 312,
+            "Width": 64,
+            "Height": 60,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "incMinus",
+            "X": 420,
+            "Y": 323,
+            "Width": 64,
+            "Height": 38,
+            "TextId": "SET_MINUS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "incValueBg",
+            "X": 492,
+            "Y": 312,
+            "Width": 196,
+            "Height": 60,
+            "Color": {
+              "Red": 23,
+              "Green": 26,
+              "Blue": 34
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "incValue",
+            "X": 492,
+            "Y": 323,
+            "Width": 196,
+            "Height": 38,
+            "TextId": "WC_VALUE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "incPlusBg",
+            "X": 696,
+            "Y": 312,
+            "Width": 64,
+            "Height": 60,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "incPlus",
+            "X": 696,
+            "Y": 323,
+            "Width": 64,
+            "Height": 38,
+            "TextId": "SET_PLUS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "btnCancelBg",
+            "X": 140,
+            "Y": 396,
+            "Width": 240,
+            "Height": 60,
+            "Color": {
+              "Red": 42,
+              "Green": 47,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "btnCancelLabel",
+            "X": 140,
+            "Y": 412,
+            "Width": 240,
+            "Height": 30,
+            "TextId": "BTN_CANCEL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "btnApplyBg",
+            "X": 420,
+            "Y": 396,
+            "Width": 240,
+            "Height": 60,
+            "Color": {
+              "Red": 31,
+              "Green": 111,
+              "Blue": 74
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "btnApplyLabel",
+            "X": 420,
+            "Y": 412,
+            "Width": 240,
+            "Height": 30,
+            "TextId": "BTN_APPLY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "ChessClock",
+    "Resolution": {
+      "Width": 480,
+      "Height": 800
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "GameScreen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 800
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x9",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F769I_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.26.1",
+  "CreatedBy": "4.26.1"
+}
