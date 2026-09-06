@@ -89,3 +89,19 @@ ever use the display in portrait.
 
 Performance pins: `VSYNC_FREQ` PC6, `RENDER_TIME` PC7, `FRAME_RATE` PJ1,
 `MCU_ACTIVE` PF6.
+
+## Enclosure
+
+`enclosure/` holds printable STLs for a three-part case around the DISCO board:
+`base.stl`, `hood.stl` and `stand_10deg.stl`, a 10-degree desk stand. The hood
+telescopes over the base and is held by four M3x8 screws through vertical slots,
+giving 32 to 44 mm of total height; the stand takes two M3x10 with nuts. The board
+keeps its original white feet and rests on four pads inside the base.
+
+Print in PLA or PETG, 0.2 mm layers, 3-4 walls, 15-20% infill. `base.stl` goes
+floor down, `hood.stl` is already exported roof down — do not flip it — and
+`stand_10deg.stl` sits on its flat underside. The hood needs local supports at the
+screw slots and the tops of the connector cutouts.
+
+The fit has not been verified on hardware, and the display opening is an estimate.
+Check that the hood presses on neither glass nor board before tightening anything.
