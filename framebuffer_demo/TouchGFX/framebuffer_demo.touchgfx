@@ -1,0 +1,1135 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "_fpsText",
+            "X": 30,
+            "Y": 453,
+            "Width": 26,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId3",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "_fpsNumber",
+            "X": 7,
+            "Y": 453,
+            "Width": 21,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "CustomContainerDefinitionName": "Navigation",
+            "Type": "CustomContainerInstance",
+            "Name": "_navigation",
+            "X": 704,
+            "Y": 0,
+            "Width": 96,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation lowQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Smoke setQuality",
+              "ParameterValue": "Quality::LOW",
+              "ActionComponent": "Smoke"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation mediumQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Smoke setQuality",
+              "ParameterValue": "Quality::MEDIUM",
+              "ActionComponent": "Smoke"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation highQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Smoke setQuality",
+              "ParameterValue": "Quality::HIGH",
+              "ActionComponent": "Smoke"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation nextPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Shapes"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation homePressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "home"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "setQuality",
+            "Description": "There are 3 different quality types: low, medium and high. This function allows you to toggle between them.",
+            "HasValue": true,
+            "ValueType": "Quality"
+          }
+        ],
+        "Name": "Smoke",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0,
+        "Includes": "#include \"gui/common/DataTypes.hpp\""
+      },
+      {
+        "Components": [
+          {
+            "Type": "Box",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 128,
+            "Name": "backgroundOverlay",
+            "X": 0,
+            "Y": 353,
+            "Width": 800,
+            "Height": 127,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Image",
+            "RelativeFilename": "background.png",
+            "Alpha": 255,
+            "Name": "backgroundImage",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "_fpsText",
+            "X": 30,
+            "Y": 453,
+            "Width": 26,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId3",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "_fpsNumber",
+            "X": 6,
+            "Y": 453,
+            "Width": 22,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "CustomContainerDefinitionName": "Navigation",
+            "Type": "CustomContainerInstance",
+            "Name": "_navigation",
+            "X": 704,
+            "Y": 0,
+            "Width": 96,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation lowQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Torus setQuality",
+              "ParameterValue": "Quality::LOW",
+              "ActionComponent": "Torus"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation mediumQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Torus setQuality",
+              "ParameterValue": "Quality::MEDIUM",
+              "ActionComponent": "Torus"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation highQualityPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Torus setQuality",
+              "ParameterValue": "Quality::HIGH",
+              "ActionComponent": "Torus"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation nextPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Smoke"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation homePressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "home"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "setQuality",
+            "Description": "There are 3 different quality types: low, medium and high. This function allows you to toggle between them.",
+            "HasValue": true,
+            "ValueType": "Quality"
+          }
+        ],
+        "Name": "Torus",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0,
+        "Includes": "#include \"gui/common/DataTypes.hpp\""
+      },
+      {
+        "Components": [
+          {
+            "Type": "Image",
+            "RelativeFilename": "menuBackground.png",
+            "Alpha": 255,
+            "Name": "background",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Button",
+            "Pressed": "screen_1.png",
+            "Released": "screen_1.png",
+            "Alpha": 255,
+            "Name": "torusButton",
+            "X": 17,
+            "Y": 219,
+            "Width": 235,
+            "Height": 141,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Button",
+            "Pressed": "screen_2.png",
+            "Released": "screen_2.png",
+            "Alpha": 255,
+            "Name": "smokeButton",
+            "X": 283,
+            "Y": 219,
+            "Width": 235,
+            "Height": 141,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Button",
+            "Pressed": "screen_3.png",
+            "Released": "screen_3.png",
+            "Alpha": 255,
+            "Name": "shapeButton",
+            "X": 550,
+            "Y": 219,
+            "Width": 235,
+            "Height": 141,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "ResourceId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 1,
+              "Green": 42,
+              "Blue": 53
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "titleDropshadow",
+            "X": 195,
+            "Y": 58,
+            "Width": 413,
+            "Height": 35,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "ResourceId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 75,
+              "Green": 164,
+              "Blue": 190
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "title",
+            "X": 193,
+            "Y": 55,
+            "Width": 413,
+            "Height": 35,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 75,
+              "Green": 164,
+              "Blue": 190
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "subDemoTitle1",
+            "X": 29,
+            "Y": 151,
+            "Width": 196,
+            "Height": 42,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 75,
+              "Green": 164,
+              "Blue": 190
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "subDemoTitle2",
+            "X": 298,
+            "Y": 151,
+            "Width": 204,
+            "Height": 42,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId10",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 75,
+              "Green": 164,
+              "Blue": 190
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "subDemoTitle3",
+            "X": 600,
+            "Y": 151,
+            "Width": 135,
+            "Height": 42,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "smokeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Smoke"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "torusButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Torus"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "shapeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Shapes"
+            }
+          }
+        ],
+        "Name": "home",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Type": "Box",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Name": "_background",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "_fpsText",
+            "X": 30,
+            "Y": 453,
+            "Width": 26,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId7",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "_fpsNumber",
+            "X": 6,
+            "Y": 453,
+            "Width": 22,
+            "Height": 23,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "CustomContainerDefinitionName": "Navigation",
+            "Type": "CustomContainerInstance",
+            "Name": "_navigation",
+            "X": 704,
+            "Y": 0,
+            "Width": 96,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Navigation setQualityEnabled",
+              "ParameterValue": "false",
+              "ActionComponent": "_navigation"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation nextPressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Torus"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation homePressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerCustom",
+              "TriggerCustomTypeName": "Navigation homePressed happens",
+              "TriggerComponent": "_navigation"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "home"
+            }
+          }
+        ],
+        "Name": "Shapes",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "Components": [
+              {
+                "Type": "Image",
+                "RelativeFilename": "quality.png",
+                "Alpha": 255,
+                "Name": "qualityLabel",
+                "X": 0,
+                "Y": 234,
+                "Width": 96,
+                "Height": 31,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "RadioButton",
+                "Alpha": 255,
+                "Selected": false,
+                "Deselectable": false,
+                "FileNameSelected": "quality_low_deselected_active.png",
+                "FileNameSelectedPressed": "quality_low_deselected_active.png",
+                "FileNameUnselected": "quality_low_deselected_inactive.png",
+                "FileNameUnselectedPressed": "quality_low_deselected_active.png",
+                "RadioButtonGroup": "radioButtonGroup1",
+                "Name": "lowQualityButton",
+                "X": 0,
+                "Y": 255,
+                "Width": 96,
+                "Height": 74,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "RadioButton",
+                "Alpha": 255,
+                "Selected": false,
+                "Deselectable": false,
+                "FileNameSelected": "quality_medium_deselected_active.png",
+                "FileNameSelectedPressed": "quality_medium_deselected_active.png",
+                "FileNameUnselected": "quality_medium_deselected_inactive.png",
+                "FileNameUnselectedPressed": "quality_medium_deselected_active.png",
+                "RadioButtonGroup": "radioButtonGroup1",
+                "Name": "mediumQualityButton",
+                "X": 0,
+                "Y": 329,
+                "Width": 96,
+                "Height": 74,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "RadioButton",
+                "Alpha": 255,
+                "Selected": true,
+                "Deselectable": false,
+                "FileNameSelected": "quality_high_deselected_active.png",
+                "FileNameSelectedPressed": "quality_high_deselected_active.png",
+                "FileNameUnselected": "quality_high_deselected_inactive.png",
+                "FileNameUnselectedPressed": "quality_high_deselected_active.png",
+                "RadioButtonGroup": "radioButtonGroup1",
+                "Name": "highQualityButton",
+                "X": 0,
+                "Y": 403,
+                "Width": 96,
+                "Height": 74,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "Button",
+                "Pressed": "next_icon.png",
+                "Released": "next_icon_pressed.png",
+                "Alpha": 255,
+                "Name": "nextButton",
+                "X": 0,
+                "Y": 89,
+                "Width": 96,
+                "Height": 96,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "Button",
+                "Pressed": "home_icon.png",
+                "Released": "home_icon_pressed.png",
+                "Alpha": 255,
+                "Name": "homeButton",
+                "X": 0,
+                "Y": 1,
+                "Width": 96,
+                "Height": 96,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "SlideMenu",
+            "FileNameBackground": "menu_background.png",
+            "BackgroundX": 0,
+            "BackgroundY": 0,
+            "UseButton": true,
+            "FileNameButtonPressed": "house_pressed.png",
+            "FileNameButtonReleased": "house.png",
+            "ButtonX": 15,
+            "ButtonY": 492,
+            "State": "Collapsed",
+            "ExpandDirection": "South",
+            "Easing": "Sine",
+            "EasingOption": "InOut",
+            "AnimationDuration": 200,
+            "VisiblePixelsWhenCollapsed": 92,
+            "HiddenPixelsWhenExpanded": 0,
+            "ExpandedStateTimeout": 3000,
+            "Name": "slideMenu",
+            "X": 0,
+            "Y": 0,
+            "Width": 200,
+            "Height": 576,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "homePressedCalled",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionEmit",
+              "TriggerCustomTypeName": "Navigation homePressed happens"
+            }
+          },
+          {
+            "InteractionName": "nextPressedCalled",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "nextButton"
+            },
+            "Action": {
+              "Type": "ActionEmit",
+              "TriggerCustomTypeName": "Navigation nextPressed happens"
+            }
+          },
+          {
+            "InteractionName": "lowQuality",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "lowQualityButton"
+            },
+            "Action": {
+              "Type": "ActionEmit",
+              "TriggerCustomTypeName": "Navigation lowQualityPressed happens"
+            }
+          },
+          {
+            "InteractionName": "mediumQuality",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "mediumQualityButton"
+            },
+            "Action": {
+              "Type": "ActionEmit",
+              "TriggerCustomTypeName": "Navigation mediumQualityPressed happens"
+            }
+          },
+          {
+            "InteractionName": "highQuality",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "highQualityButton"
+            },
+            "Action": {
+              "Type": "ActionEmit",
+              "TriggerCustomTypeName": "Navigation highQualityPressed happens"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "highQualityButton"
+            },
+            "Action": {
+              "Type": "ActionResetTimer",
+              "ActionComponent": "slideMenu"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "mediumQualityButton"
+            },
+            "Action": {
+              "Type": "ActionResetTimer",
+              "ActionComponent": "slideMenu"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerRadioButtonSelected",
+              "TriggerComponent": "lowQualityButton"
+            },
+            "Action": {
+              "Type": "ActionResetTimer",
+              "ActionComponent": "slideMenu"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call Navigation setQualityEnabled"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "lowQualityButton.setVisible(value);\r\nmediumQualityButton.setVisible(value);\r\nhighQualityButton.setVisible(value);\r\nqualityLabel.setVisible(value);\r\ninvalidate();"
+            }
+          }
+        ],
+        "CustomTriggers": [
+          {
+            "Name": "homePressed",
+            "HasValue": false
+          },
+          {
+            "Name": "nextPressed",
+            "HasValue": false
+          },
+          {
+            "Name": "lowQualityPressed",
+            "HasValue": false
+          },
+          {
+            "Name": "mediumQualityPressed",
+            "HasValue": false
+          },
+          {
+            "Name": "highQualityPressed",
+            "HasValue": false
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "setQualityEnabled",
+            "HasValue": true,
+            "ValueType": "bool"
+          }
+        ],
+        "Name": "Navigation",
+        "X": 0,
+        "Y": 0,
+        "Width": 96,
+        "Height": 480
+      }
+    ],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "ResourceId1",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId7",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId9",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      }
+    ],
+    "Name": "framebuffer_demo",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "home",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F769I_DISCO.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7"
+  },
+  "Version": "4.17.0",
+  "CreatedBy": "4.17.0"
+}

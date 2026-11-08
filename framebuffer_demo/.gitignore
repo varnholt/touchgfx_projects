@@ -1,0 +1,66 @@
+# Build outputs, including simulator tests and framebuffer snapshots.
+/TouchGFX/build/
+/STM32CubeIDE/Debug/
+/STM32CubeIDE/Release/
+/gcc/build/
+
+# Local Visual Studio state; retain shared solution and project files.
+**/.vs/
+*.suo
+*.vcxproj.user
+*.VC.db
+*.VC.opendb
+
+# Python tool caches.
+__pycache__/
+*.py[cod]
+
+# CubeMX local state.
+.mxproject
+backup_*.ioc
+
+# Match the other projects: regenerate the GUI/assets and obtain the SDK locally.
+/TouchGFX/*_backup.touchgfx
+/TouchGFX/generated/
+/TouchGFX/target.config
+/Middlewares/ST/touchgfx/
+/Middlewares/ST/touchgfx_components/
+/Middlewares/ST/touchgfx_backup*/
+/gcc/components.mk
+
+# Retain this older project's maintained simulator/build entry points and tests.
+/TouchGFX/config/*
+!/TouchGFX/config/gcc/
+/TouchGFX/config/gcc/*
+!/TouchGFX/config/gcc/app.mk
+!/TouchGFX/config/msvs/
+/TouchGFX/config/msvs/*
+!/TouchGFX/config/msvs/Application.props
+/TouchGFX/simulator/*
+!/TouchGFX/simulator/main.cpp
+!/TouchGFX/simulator/selftest.hpp
+!/TouchGFX/simulator/gcc/
+/TouchGFX/simulator/gcc/*
+!/TouchGFX/simulator/gcc/Makefile
+!/TouchGFX/simulator/msvs/
+/TouchGFX/simulator/msvs/*
+!/TouchGFX/simulator/msvs/Application.sln
+!/TouchGFX/simulator/msvs/Application.vcxproj
+!/TouchGFX/simulator/msvs/Application.vcxproj.filters
+!/TouchGFX/simulator/msvs/simulator.targets
+
+# IAR and Keil local state and output.
+/EWARM/settings/
+/EWARM/STM32*/
+/EWARM/*.dep
+/EWARM/*.ewt
+/EWARM/*.ipcf
+/EWARM/*.custom_argvars
+/MDK-ARM/RTE/
+/MDK-ARM/STM32*/
+/MDK-ARM/DebugConfig/
+/MDK-ARM/*.lst
+/MDK-ARM/*.out
+/MDK-ARM/*vguix.*
+/STM32CubeIDE/.settings/
+/build/
