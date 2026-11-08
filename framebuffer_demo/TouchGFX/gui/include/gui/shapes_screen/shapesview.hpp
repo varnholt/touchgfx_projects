@@ -20,6 +20,13 @@ public:
 
     void handleTickEvent() override;
 
+    //! Control the optional diagnostic HUD, including clean gallery captures.
+    void setPerformanceCounterVisible(bool visible)
+    {
+        _fpsText.setVisible(visible);
+        _fpsNumber.setVisible(visible);
+    }
+
 private:
 
     void updateFPS(uint8_t fps);

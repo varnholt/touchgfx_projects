@@ -25,6 +25,13 @@ public:
 	void setQuality(Quality value) override;
 
 
+    //! Control the optional diagnostic HUD, including clean gallery captures.
+    void setPerformanceCounterVisible(bool visible)
+    {
+        _fpsText.setVisible(visible);
+        _fpsNumber.setVisible(visible);
+    }
+
 protected:
 
     void handleTickEvent() override;

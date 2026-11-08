@@ -34,7 +34,7 @@ The demo includes native regression tests and a simulator self-test for screen
 transitions, input lifecycle and clipped redraws. It currently uses **TouchGFX
 4.17.0**; the chess clock uses **4.26.1**. Each project keeps its own SDK and
 generated output local. See the [demo guide](framebuffer_demo/README.md) for setup
-and the planned upgrade. Simulator preview FPS values are not performance measurements.
+and the planned upgrade. The project guide includes a separate capture of each demo screen.
 
 ## Open and build
 

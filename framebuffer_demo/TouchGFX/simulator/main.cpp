@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <simulator/mainBase.hpp>
 #include "selftest.hpp"
+#include "previews.hpp"
 #include <cstring>
 
 //#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
@@ -35,10 +36,16 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     touchgfx::HAL& hal = touchgfx::touchgfx_generic_init<touchgfx::HALSDL2>(dma, lcd, tc, SIM_WIDTH, SIM_HEIGHT, 0, 0);
 
     bool selfTest = false;
+    bool capturePreviews = false;
     for (int i = 1; i < argc; ++i)
+    {
         if (std::strcmp(argv[i], "--self-test") == 0) selfTest = true;
-    if (selfTest) static_cast<touchgfx::HALSDL2&>(hal).setWindowVisible(false, false);
+        if (std::strcmp(argv[i], "--capture-previews") == 0) capturePreviews = true;
+    }
+    if (selfTest || capturePreviews) static_cast<touchgfx::HALSDL2&>(hal).setWindowVisible(false, false);
     setupSimulator(argc, argv, hal);
+    if (capturePreviews)
+        return captureSimulatorPreviews(static_cast<touchgfx::HALSDL2&>(hal)) ? EXIT_SUCCESS : EXIT_FAILURE;
     if (selfTest)
         return runSimulatorSelfTest(static_cast<touchgfx::HALSDL2&>(hal)) ? EXIT_SUCCESS : EXIT_FAILURE;
 

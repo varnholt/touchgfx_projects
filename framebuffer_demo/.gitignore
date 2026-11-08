@@ -39,6 +39,7 @@ backup_*.ioc
 /TouchGFX/simulator/*
 !/TouchGFX/simulator/main.cpp
 !/TouchGFX/simulator/selftest.hpp
+!/TouchGFX/simulator/previews.hpp
 !/TouchGFX/simulator/gcc/
 /TouchGFX/simulator/gcc/*
 !/TouchGFX/simulator/gcc/Makefile

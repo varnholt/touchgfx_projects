@@ -5,12 +5,26 @@ TouchGFX 4.17 demo for the STM32F769I Discovery board, with a Windows simulator.
 The three effects are a fluid smoke simulation, an environment-mapped 3D torus,
 and animated polygon rings that follow touch input.
 
-![Fluid smoke simulation](doc/smoke.png)
+## Screens
 
-[Torus preview](doc/torus.png) · [Polygon rings preview](doc/shapes.png)
+### Home
 
-These snapshots come from automated simulator checks; displayed FPS values are
-not performance measurements.
+![Home screen with the three effect choices](doc/home.png)
+
+### Torus
+
+![Reflective torus with its opening visible](doc/torus.png)
+
+### Smoke
+
+![Fluid smoke after the initial logo develops into flowing curls](doc/smoke.png)
+
+### Shapes
+
+![Centered polygon rings following touch input](doc/shapes.png)
+
+The gallery captures hide the optional diagnostic FPS counters. They show the
+actual simulator framebuffer without image retouching.
 
 ## First-time setup
 
@@ -82,3 +96,10 @@ The simulator test runs in a temporary hidden window and exits. It builds into
 snapshots there. Use `-Configuration Release` to validate the optimized build.
 See [the review and modernization plan](docs/modernization.md) for fixed bugs,
 remaining renderer work and the staged upgrade to current TouchGFX.
+
+## Refresh the screenshots
+
+After completing the first-time setup, run `tools/capture-previews.ps1`. It builds
+the simulator, captures all four screens and exports `doc/*.png` with Pillow
+(`python -m pip install Pillow`). Preview captures use a separate scenario from
+the input stress tests, keeping the torus opening visible and allowing smoke to develop.
