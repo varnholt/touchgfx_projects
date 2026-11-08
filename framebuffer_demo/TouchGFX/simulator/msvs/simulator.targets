@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UseBPPOption>/DUSE_BPP=$(UseBPP)</UseBPPOption>
+    <TouchGFXLibrarySuffix Condition="'$(Configuration)'=='Debug'">_debug</TouchGFXLibrarySuffix>
+  </PropertyGroup>
+  <!-- TouchGFX ships VS 2019 libraries, compatible with the v143 toolset. -->
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>$(TouchGFXReleasePath)\lib\sdl2\win32\SDL2.lib;$(TouchGFXReleasePath)\lib\sdl2\win32\SDL2_image.lib;$(TouchGFXReleasePath)\lib\win\msvs\libtouchgfx_v142$(TouchGFXLibrarySuffix).lib;user32.lib;shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Build the checked-in assets without requiring the old Ruby environment. -->
+  <Target Name="CompileCachedAssets" BeforeTargets="ClCompile" Condition="'$(RegenerateAssets)'!='true'">
+    <Error Condition="!Exists('$(ApplicationRoot)\generated\images\src\BitmapDatabase.cpp')" Text="Generated assets are missing. Regenerate them with TouchGFX 4.17 before building." />
+    <ItemGroup>
+      <ClCompile Include="$(ApplicationRoot)\generated\fonts\**\*.cpp;$(ApplicationRoot)\generated\images\**\*.cpp;$(ApplicationRoot)\generated\texts\**\*.cpp" />
+    </ItemGroup>
+  </Target>
+  <Target Name="CopySimulatorRuntime" AfterTargets="Build">
+    <ItemGroup>
+      <SimulatorRuntime Include="$(TouchGFXReleasePath)\lib\sdl2\win32\*.dll" />
+      <SimulatorRuntime Include="$(ApplicationRoot)\simulator\landscape.png" Condition="Exists('$(ApplicationRoot)\simulator\landscape.png')" />
+      <SimulatorRuntime Include="$(ApplicationRoot)\simulator\portrait.png" Condition="Exists('$(ApplicationRoot)\simulator\portrait.png')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SimulatorRuntime)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
